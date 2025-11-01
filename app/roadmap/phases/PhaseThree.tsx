@@ -3,13 +3,13 @@ import { RoadmapPhaseCard } from "../components/RoadmapPhaseCard";
 export function PhaseThree() {
   return (
     <RoadmapPhaseCard
-      title="Phase III · Cosmic Service"
-      timeframe="Q4 2025"
-      progress="Progress 3 / 4"
+      title="Stage 3 — Mobile Runner Game"
+      timeframe="Build phase"
+      progress="Planned"
       highlights={[
-        "Layer-2 loyalty passes with boostable staking multipliers",
-        "Chef residency program and global charitable banquets",
-        "Dynamic storytelling arcs that remix NFTs into seasonal collectibles",
+        "Launch a fun mobile runner that uses DOGE CHEF NFT skins and rewards tied to the token.",
+        "Integrate leaderboard perks and meme challenges sourced from the community.",
+        "Use game updates to keep momentum between major token releases.",
       ]}
     />
   );

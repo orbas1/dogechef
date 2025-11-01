@@ -8,12 +8,10 @@ export function LiquidityModule() {
       accent="90% of supply"
     >
       <p>
-        Deposited directly into a Solana-based AMM pair with USDC at genesis. LP tokens are time-locked for twelve months to
-        signal commitment and reduce launch volatility.
+        Added to Raydium on 30 Nov with a published SOL/USDC pairing plan. Liquidity is seeded from launch to cut slippage and support fast trading.
       </p>
       <p>
-        Trading fees loop back into weekly kitchen buy-backs and community reward programs, amplifying liquidity depth and
-        meme-fueled utility quests.
+        Swap fees plus the 1.2% tax allocation top up liquidity over time. Treasury updates keep the community informed about pool health and any changes.
       </p>
     </TokenSectionCard>
   );

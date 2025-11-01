@@ -8,17 +8,17 @@ const quickFacts = [
   {
     label: "Chain",
     value: "Solana",
-    detail: "Built for lightning-fast meme trades with negligible fees.",
+    detail: "Raydium launch with lightning-fast swaps and low fees.",
   },
   {
-    label: "Creator Reserve",
-    value: "10%",
-    detail: "Time-locked for storytelling, partnerships, and stability ops.",
+    label: "Total Supply",
+    value: "1B",
+    detail: "Minted once. No extra mint functions.",
   },
   {
-    label: "Liquidity",
-    value: "90%",
-    detail: "Permanent deposit into the Liquidity Cauldron AMM pair.",
+    label: "Fee",
+    value: "2%",
+    detail: "1.2% to liquidity, 0.8% to treasury operations.",
   },
 ];
 
@@ -27,8 +27,8 @@ export default function TokenomicsPage() {
     <div className="pb-28">
       <PageHeader
         eyebrow="Tokenomics"
-        title="Token design for infinite meme service"
-        description="Learn how the 1B DOGECHEF supply powers Solana-native liquidity, long-term creator incentives, and a reward system designed for playful experimentation."
+        title="Simple tokenomics, transparent flows"
+        description="1,000,000,000 DOGE CHEF tokens. 90% to Raydium liquidity, 10% to the creator fund with a public breakdown. A 2% transaction fee keeps liquidity topped up and the treasury funded."
       />
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-10">
         <div className="space-y-8">
@@ -50,12 +50,13 @@ export default function TokenomicsPage() {
             </div>
           </div>
           <div className="rounded-[36px] border-4 border-[#2b1c4a] bg-white p-8 text-sm text-[#402166] shadow-[8px_8px_0_#ffb347]">
-            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#ff6b6b]">Treasury Streams</p>
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#ff6b6b]">Creator fund split</p>
             <ul className="mt-4 space-y-2">
-              <li>• LP fees recycled into staking and quest rewards.</li>
-              <li>• Merch drops and IRL events contributing to community grants.</li>
-              <li>• NFT marketplace royalties routed to liquidity reinforcement.</li>
+              <li>• 5% reinvestment for development and ecosystem support.</li>
+              <li>• 3% marketing and partnerships.</li>
+              <li>• 2% creator income and operations.</li>
             </ul>
+            <p className="mt-4 text-xs uppercase tracking-[0.3em] text-[#ff6b6b]">Multisig recommended before launch.</p>
           </div>
         </aside>
       </section>
