@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #050510;
+  --foreground: #f7fbff;
+  --accent: #44f9ff;
+  --accent-secondary: #9f50ff;
 }
 
 @theme inline {
@@ -12,15 +15,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: rgba(68, 249, 255, 0.35);
+  color: #050510;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(68, 249, 255, 0.4) rgba(15, 23, 42, 0.4);
+}
+
+div::-webkit-scrollbar,
+section::-webkit-scrollbar {
+  width: 6px;
+}
+
+div::-webkit-scrollbar-track,
+section::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+div::-webkit-scrollbar-thumb,
+section::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(68, 249, 255, 0.6), rgba(159, 80, 255, 0.6));
+  border-radius: 999px;
 }
