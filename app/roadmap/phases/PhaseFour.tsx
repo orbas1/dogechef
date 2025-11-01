@@ -3,13 +3,13 @@ import { RoadmapPhaseCard } from "../components/RoadmapPhaseCard";
 export function PhaseFour() {
   return (
     <RoadmapPhaseCard
-      title="Phase IV · Infinite Kitchen"
-      timeframe="2026+"
-      progress="Progress 4 / 4"
+      title="Stage 4 — The Kitchen AI"
+      timeframe="In development"
+      progress="Future"
       highlights={[
-        "Open-source recipe engine for allied communities",
-        "Interoperable identity and avatar integrations across memeverses",
-        "Holographic live events blending AR overlays with IRL tastings",
+        "Release a lightweight AI toolkit for marketers and blockchain research.",
+        "Ship analytics dashboards, token pulse snapshots and campaign helpers.",
+        "Use community feedback to decide which modules ship first.",
       ]}
     />
   );

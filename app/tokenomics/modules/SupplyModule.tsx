@@ -8,12 +8,10 @@ export function SupplyModule() {
       accent="Hard cap"
     >
       <p>
-        Minted once at launch. Ten percent (100,000,000 DOGECHEF) remains with the creator wallet, subject to a three-year linear
-        vest for creative development and emergency response funds.
+        Fixed supply minted at launch. 900,000,000 DOGE CHEF (90%) is paired with SOL/USDC on Raydium. 100,000,000 DOGE CHEF (10%) sits in the creator fund wallet for reinvestment, marketing and operations.
       </p>
       <p>
-        No future mint functions exist. Supply adjustments can only occur through deflationary events ratified by governance,
-        such as token burns linked to seasonal quests.
+        No extra mint functions or burn gimmicks are planned. Any future changes to supply must pass governance and be documented in an updated whitepaper.
       </p>
     </TokenSectionCard>
   );

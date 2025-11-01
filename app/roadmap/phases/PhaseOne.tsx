@@ -3,13 +3,13 @@ import { RoadmapPhaseCard } from "../components/RoadmapPhaseCard";
 export function PhaseOne() {
   return (
     <RoadmapPhaseCard
-      title="Phase I · Mise en Place"
-      timeframe="Q1–Q2 2025"
-      progress="Progress 1 / 4"
+      title="Stage 1 — DEX Launch"
+      timeframe="30 Nov"
+      progress="Live"
       highlights={[
-        "Community tastings, whitelist curation, and DAO bootstrapping",
-        "Smart contract audits and Solana devnet stress tests",
-        "Recipe NFT concept art drop unlocking guild selection",
+        "DOGE CHEF token drops on Raydium with SOL/USDC liquidity added.",
+        "Trading opens with 90% of the supply in the pool and transparent creator fund details shared.",
+        "Community hub pushes launch comms, memes and safety reminders.",
       ]}
     />
   );

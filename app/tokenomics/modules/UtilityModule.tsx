@@ -3,17 +3,15 @@ import { TokenSectionCard } from "../components/TokenSectionCard";
 export function UtilityModule() {
   return (
     <TokenSectionCard
-      title="Utility Flywheel"
-      metric="Stakers earn weekly boosts"
-      accent="Chef quests"
+      title="Fee mechanics"
+      metric="2% transaction fee"
+      accent="Configured by governance"
     >
       <p>
-        Staked DOGECHEF accrues XP multipliers redeemable for rare recipe NFTs, governance power-ups, and discounts on IRL meme
-        dinners. XP tiers refresh each season to keep participation lively.
+        Every buy and sell routes 2% of the trade: 1.2% tops up liquidity and 0.8% flows to the treasury for marketing, reinvestment and airdrops. Splits can evolve with community governance.
       </p>
       <p>
-        Liquidity providers gain bonus raffle tickets for Solana ecosystem collaborations, while creators can pitch limited-time
-        menu drops that share revenue with the treasury.
+        Treasury spend is proposed through the community hub and executed via multisig once signers approve. Fee performance and adjustments will be documented in the whitepaper and public dashboards.
       </p>
     </TokenSectionCard>
   );

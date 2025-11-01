@@ -5,42 +5,42 @@ import { CountdownTimer } from "@/components/CountdownTimer";
 
 const heroHighlights = [
   {
-    label: "Solana Speedrun",
-    description: "Sub-second finality keeps meme feasts crisp and community vibes sizzling.",
+    label: "Launch",
+    description: "Stage 1 goes live 30 Nov on Raydium with liquidity seeded from day one.",
   },
   {
-    label: "1B Total Supply",
-    description: "10% chef stash for creative fuel, 90% splashed straight into the liquidity cauldron.",
+    label: "Supply",
+    description: "1,000,000,000 DOGE CHEF tokens — 90% to DEX, 10% creator fund with a clear split.",
   },
   {
-    label: "Degenerate Hospitality",
-    description: "Cartoon quests, fusion drops, and DAO prank wars for holders who show up hungry.",
+    label: "Fees",
+    description: "2% transaction fee supports the liquidity pool and community treasury.",
   },
 ];
 
 const featureCards = [
   {
-    title: "Hyper-Solana Kitchen",
+    title: "Memecoin for the party-minded",
     description:
-      "Programmed on Solana with composable ingredients—flash-freeze swaps, frictionless staking, and unstoppable meme sauces.",
+      "DOGE CHEF is built for potheads, party heads, gamblers and degens who want memes first and moon talk second.",
   },
   {
-    title: "Chef's Chaos Engine",
+    title: "Simple token plan",
     description:
-      "A playful governance loop where votes trigger live cookoffs, LP boosts, and lore-expanding meme comics in real time.",
+      "90% of supply hits Raydium at launch. The remaining 10% funds reinvestment, marketing and creator operations.",
   },
   {
-    title: "Multiverse Catering",
+    title: "Utility in stages",
     description:
-      "Blend IRL pop-ups, AR scavenger hunts, and collectible recipe NFTs that drip perks across every DogeChef hangout.",
+      "NFT drops, a mobile runner game and lightweight AI tools arrive after launch, all tied to the DOGE CHEF culture.",
   },
 ];
 
 const stats = [
-  { value: "1,000,000,000", label: "DOGECHEF Supply" },
-  { value: "10%", label: "Creator Reserve" },
-  { value: "90%", label: "Liquidity Pool" },
-  { value: "30 Nov", label: "Mint Countdown" },
+  { value: "1,000,000,000", label: "Total Supply" },
+  { value: "90%", label: "Liquidity at Launch" },
+  { value: "10%", label: "Creator Fund" },
+  { value: "30 Nov", label: "DEX Launch" },
 ];
 
 export default function Home() {
@@ -55,13 +55,13 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -top-10 -left-6 h-16 w-16 -rotate-6 rounded-full border-4 border-[#2b1c4a] bg-[#ffe7d1] shadow-[4px_4px_0_#ffb347]" />
             <h1 className="relative text-5xl font-black uppercase leading-[1.02] tracking-tight text-[#2b1c4a] sm:text-6xl">
-              Meme cuisine for
+              DOGE CHEF 🍳
               <br />
-              degens with taste.
+              Solana memecoin energy.
             </h1>
           </div>
           <p className="max-w-xl text-base leading-7 text-[#402166] sm:text-lg">
-            DogeChef is the splashiest Solana meme bistro—an experimental playground where lightning-fast tech powers community-only banquets, collectible recipes, and reward-fueled mayhem.
+            DOGE CHEF is a Solana-native community coin for the party-minded. Launching 30 Nov on Raydium with a 1B supply, it keeps things simple — memes, NFTs, games and AI tools rolled out stage by stage.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <Link
@@ -118,13 +118,13 @@ export default function Home() {
       <section className="relative mx-auto w-full max-w-6xl px-6 pb-24 lg:px-10">
         <div className="mx-auto max-w-3xl text-center text-[#2b1c4a]">
           <p className="inline-flex rounded-full border-4 border-[#2b1c4a] bg-[#fffbe6] px-4 py-1 text-xs font-black uppercase tracking-[0.45em] text-[#ff6b6b] shadow-[4px_4px_0_#2b1c4a]">
-            Why DogeChef
+            Why DOGE CHEF
           </p>
           <h2 className="mt-6 text-3xl font-black uppercase sm:text-4xl">
-            Culinary-grade mischief meets Solana-grade velocity.
+            Built for people who live for memes, late nights and quick moves.
           </h2>
           <p className="mt-6 text-base leading-7 text-[#402166] sm:text-lg">
-            Each smart contract is a kitchen gadget tuned for maximum delight—crafting meme-forward staking, narrative rewards, and community grants that keep our flavor-verse bubbling.
+            Fast Solana swaps, transparent tokenomics and a roadmap that puts culture first. We launch loud, keep the hype rolling and reward the community that shows up.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,13 +147,16 @@ export default function Home() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <div className="space-y-6">
             <p className="inline-flex rounded-full border-4 border-[#2b1c4a] bg-[#fffbe6] px-4 py-1 text-xs font-black uppercase tracking-[0.4em] text-[#ff6b6b] shadow-[4px_4px_0_#2b1c4a]">
-              Promise of the Meme Bistro
+              How it works
             </p>
             <h2 className="text-3xl font-black uppercase sm:text-4xl">
-              Transparent token recipes, open-source kitchen antics.
+              Simple launch, clear stages, community-led energy.
             </h2>
             <p className="text-base leading-7 text-[#402166]">
-              Follow every Solana transaction in our public dashboard, audit the community treasury, and co-create dishes through the Gastronaut Guild. Your vote can trigger new story arcs, quests, or charitable drops.
+              • Total supply: 1,000,000,000 DOGE CHEF.
+              <br />• 90% seeded to Raydium for trading, 10% creator fund split across reinvestment, marketing and operations.
+              <br />• 2% transaction fee routes 1.2% to liquidity top-ups and 0.8% to the treasury for marketing, reinvestment and airdrops.
+              <br />• NFTs, a mobile runner game and Kitchen AI tools unlock utility over time with the community steering the vibes.
             </p>
             <Link
               href="/roadmap"
@@ -163,9 +166,9 @@ export default function Home() {
             </Link>
           </div>
           <div className="rounded-3xl border-4 border-[#2b1c4a] bg-[#fffdf2]/90 p-8 text-center shadow-[8px_8px_0_#ffb347]">
-            <p className="text-lg font-black uppercase tracking-[0.3em] text-[#ff6b6b]">Community Whisk</p>
+            <p className="text-lg font-black uppercase tracking-[0.3em] text-[#ff6b6b]">Join the Kitchen</p>
             <p className="mt-4 text-sm leading-6 text-[#402166]">
-              Daily lore recaps, kitchen standups, and meme jam sessions keep the experience fresh. Bring your gifs, your recipes, and your unstoppable optimism.
+              Follow us on X <strong>@dogechefSOL</strong>, Instagram <strong>@doge_chef</strong>, visit <strong>dogechef.online</strong> and hop into Telegram for launch updates, meme bounties and whitelist drops.
             </p>
             <Link
               href="/whitelist"
