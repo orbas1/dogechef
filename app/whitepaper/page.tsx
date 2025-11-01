@@ -1,33 +1,17 @@
 import Link from "next/link";
+
 import { PageHeader } from "@/components/PageHeader";
 
-const sections = [
-  {
-    title: "Visionary Cuisine Economics",
-    body:
-      "DogeChef fuses deflationary token mechanics with experience-driven collectibles. Holder actions unlock exclusive seasonal menus, curated collaborations, and yield-bearing culinary quests.",
-  },
-  {
-    title: "Treasury & Sustainability",
-    body:
-      "Treasury reserves are diversified across stable pairs and strategic LP vaults. Quarterly tastings (community votes) determine how new revenue streams re-flavor the ecosystem.",
-  },
-  {
-    title: "DAO-Led Governance",
-    body:
-      "The Gastronaut Guild orchestrates proposals that span philanthropic pop-ups, NFT drops, and cross-chain expansions. Reputation multipliers reward consistent community chefs.",
-  },
-  {
-    title: "Security & Compliance",
-    body:
-      "Third-party audits, bug bounties, and on-chain dashboards guarantee transparency. Adaptive compliance layers ensure DogeChef is prepared for evolving regulatory palates.",
-  },
-];
+import { CommunityEcosystem } from "./modules/CommunityEcosystem";
+import { EconomicDesign } from "./modules/EconomicDesign";
+import { ExecutiveSummary } from "./modules/ExecutiveSummary";
+import { ProtocolArchitecture } from "./modules/ProtocolArchitecture";
+import { RiskMitigation } from "./modules/RiskMitigation";
 
-const downloadLinks = [
-  { label: "Full PDF", href: "#" },
-  { label: "Tokenomics Snapshot", href: "/tokenomics" },
-  { label: "Smart Contract Overview", href: "#" },
+const referenceLinks = [
+  { label: "Download Litepaper", href: "#" },
+  { label: "Tokenomics", href: "/tokenomics" },
+  { label: "Roadmap", href: "/roadmap" },
 ];
 
 export default function WhitepaperPage() {
@@ -35,42 +19,40 @@ export default function WhitepaperPage() {
     <div className="pb-28">
       <PageHeader
         eyebrow="Whitepaper"
-        title="A culinary manifesto for Web3 flavor architects"
-        description="Dive into the DogeChef protocol architecture—where meme energy, gastronomic storytelling, and resilient token design collide."
+        title="The DogeChef Meme Bistro Whitepaper"
+        description="Discover how a Solana-powered meme economy turns culinary chaos into sustainable on-chain value. This document covers architecture, economics, and community rituals behind the 1B supply launch."
         actions={
           <Link
             href="#"
-            className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-orange-200/60 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-orange-600"
+            className="inline-flex items-center justify-center rounded-full border-4 border-[#2b1c4a] bg-[#ff6b6b] px-6 py-3 text-sm font-black uppercase tracking-[0.3em] text-white shadow-[6px_6px_0_#2b1c4a] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#ff3b81]"
           >
             Download PDF
           </Link>
         }
       />
-      <section className="mx-auto grid w-full max-w-5xl gap-10 px-6 lg:grid-cols-[1.4fr_1fr] lg:px-10">
-        <article className="space-y-8">
-          {sections.map((section) => (
-            <div
-              key={section.title}
-              className="rounded-3xl border border-orange-100 bg-white p-8 shadow-sm"
-            >
-              <h2 className="text-2xl font-semibold text-slate-900">{section.title}</h2>
-              <p className="mt-4 text-base leading-7 text-slate-600">{section.body}</p>
-            </div>
-          ))}
-        </article>
-        <aside className="space-y-6 rounded-3xl border border-orange-100 bg-orange-50 p-8 shadow-sm">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
-            Reference Materials
-          </h3>
-          <p className="text-sm text-slate-600">
-            Download companion documents to explore DogeChef&apos;s token architecture, governance framework, and technical primitives.
-          </p>
-          <ul className="space-y-4 text-sm font-medium text-slate-700">
-            {downloadLinks.map((link) => (
+
+      <section className="mx-auto grid w-full max-w-6xl gap-10 px-6 lg:grid-cols-[1.35fr_0.65fr] lg:px-10">
+        <div className="space-y-8">
+          <ExecutiveSummary />
+          <ProtocolArchitecture />
+          <EconomicDesign />
+          <CommunityEcosystem />
+          <RiskMitigation />
+        </div>
+        <aside className="space-y-6 rounded-[36px] border-4 border-[#2b1c4a] bg-[#fffdf2]/90 p-8 text-[#2b1c4a] shadow-[8px_8px_0_#ffb347]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#ff6b6b]">Quick Reference</p>
+            <p className="mt-3 text-sm leading-6 text-[#402166]">
+              Keep these resources handy as you tour the meme bistro. Each link expands on the sections inside the whitepaper and
+              points to open-source repositories maintained by the community guilds.
+            </p>
+          </div>
+          <ul className="space-y-4 text-sm font-black uppercase tracking-[0.25em]">
+            {referenceLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="flex items-center justify-between rounded-2xl border border-orange-100 bg-white px-4 py-3 transition-transform duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-600"
+                  className="flex items-center justify-between rounded-3xl border-4 border-[#2b1c4a] bg-white px-5 py-3 text-[#2b1c4a] shadow-[6px_6px_0_#ffb347] transition-transform duration-300 hover:-translate-y-1 hover:bg-[#fff3a5]"
                 >
                   {link.label}
                   <span aria-hidden>↗</span>
@@ -78,6 +60,13 @@ export default function WhitepaperPage() {
               </li>
             ))}
           </ul>
+          <div className="rounded-3xl border-4 border-[#2b1c4a] bg-white px-6 py-5 text-sm text-[#402166] shadow-[6px_6px_0_#ffb347]">
+            <p className="font-black uppercase tracking-[0.3em] text-[#ff6b6b]">Solana Commitment</p>
+            <p className="mt-2">
+              Low fees and lightning finality mean more experiments, more quests, and more chances to feed the community treasury
+              without friction.
+            </p>
+          </div>
         </aside>
       </section>
     </div>

@@ -1,48 +1,24 @@
 import { PageHeader } from "@/components/PageHeader";
 
-const distribution = [
-  {
-    title: "Community Reserve",
-    percentage: "42%",
-    description: "Seasonal drops, liquidity incentives, and Gastronaut Guild grants.",
-  },
-  {
-    title: "Public Sale",
-    percentage: "28%",
-    description: "Dutch-auction style launch with layered bonding curves for fair entry.",
-  },
-  {
-    title: "Ecosystem Vault",
-    percentage: "18%",
-    description: "Partnership initiatives, cross-chain expansion, and culinary pop-ups.",
-  },
-  {
-    title: "Team & Advisors",
-    percentage: "8%",
-    description: "Vested over 24 months with transparent monthly unlock dashboards.",
-  },
-  {
-    title: "Charity Mise",
-    percentage: "4%",
-    description: "Supporting global food relief efforts and culinary education programs.",
-  },
-];
+import { LiquidityModule } from "./modules/LiquidityModule";
+import { SupplyModule } from "./modules/SupplyModule";
+import { UtilityModule } from "./modules/UtilityModule";
 
-const metrics = [
+const quickFacts = [
   {
-    label: "Total Supply",
-    value: "888,000 DOGECHEF",
-    detail: "Hard-capped supply seasoned for scarcity and long-term flavor.",
+    label: "Chain",
+    value: "Solana",
+    detail: "Built for lightning-fast meme trades with negligible fees.",
   },
   {
-    label: "Initial Liquidity",
-    value: "$2.8M",
-    detail: "Locked LP pairs on Ethereum and Base with audited multi-sig control.",
+    label: "Creator Reserve",
+    value: "10%",
+    detail: "Time-locked for storytelling, partnerships, and stability ops.",
   },
   {
-    label: "Staking APY",
-    value: "68% intro",
-    detail: "Dynamic yield that adjusts with treasury inflows and event revenue.",
+    label: "Liquidity",
+    value: "90%",
+    detail: "Permanent deposit into the Liquidity Cauldron AMM pair.",
   },
 ];
 
@@ -51,40 +27,37 @@ export default function TokenomicsPage() {
     <div className="pb-28">
       <PageHeader
         eyebrow="Tokenomics"
-        title="Balanced token distribution for flavor-rich sustainability"
-        description="DogeChef's economics are engineered to empower community creativity, reward long-term believers, and accelerate culinary innovation across Web3."
+        title="Token design for infinite meme service"
+        description="Learn how the 1B DOGECHEF supply powers Solana-native liquidity, long-term creator incentives, and a reward system designed for playful experimentation."
       />
-      <section className="mx-auto w-full max-w-5xl space-y-12 px-6 lg:px-10">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {distribution.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-3xl border border-orange-100 bg-white p-8 shadow-sm"
-            >
-              <div className="flex items-baseline justify-between">
-                <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-                <span className="text-3xl font-semibold text-orange-500">{item.percentage}</span>
-              </div>
-              <p className="mt-4 text-sm leading-6 text-slate-600">{item.description}</p>
+      <section className="mx-auto grid w-full max-w-6xl gap-8 px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-10">
+        <div className="space-y-8">
+          <SupplyModule />
+          <LiquidityModule />
+          <UtilityModule />
+        </div>
+        <aside className="flex flex-col gap-6">
+          <div className="rounded-[36px] border-4 border-[#2b1c4a] bg-[#fffdf2]/90 p-8 text-[#2b1c4a] shadow-[8px_8px_0_#ffb347]">
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#ff6b6b]">Quick Facts</p>
+            <div className="mt-6 space-y-5">
+              {quickFacts.map((fact) => (
+                <div key={fact.label} className="space-y-1">
+                  <p className="text-xs font-black uppercase tracking-[0.35em] text-[#2b1c4a]">{fact.label}</p>
+                  <p className="text-2xl font-black uppercase tracking-[0.2em] text-[#ff6b6b]">{fact.value}</p>
+                  <p className="text-sm text-[#402166]">{fact.detail}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="rounded-[32px] border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-orange-100 p-10 shadow-[0_25px_70px_rgba(249,115,22,0.16)]">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
-            Core Metrics
-          </h2>
-          <div className="mt-8 grid gap-8 sm:grid-cols-3">
-            {metrics.map((metric) => (
-              <div key={metric.label} className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                  {metric.label}
-                </p>
-                <p className="text-2xl font-semibold text-orange-600">{metric.value}</p>
-                <p className="text-sm text-slate-600">{metric.detail}</p>
-              </div>
-            ))}
           </div>
-        </div>
+          <div className="rounded-[36px] border-4 border-[#2b1c4a] bg-white p-8 text-sm text-[#402166] shadow-[8px_8px_0_#ffb347]">
+            <p className="text-sm font-black uppercase tracking-[0.35em] text-[#ff6b6b]">Treasury Streams</p>
+            <ul className="mt-4 space-y-2">
+              <li>• LP fees recycled into staking and quest rewards.</li>
+              <li>• Merch drops and IRL events contributing to community grants.</li>
+              <li>• NFT marketplace royalties routed to liquidity reinforcement.</li>
+            </ul>
+          </div>
+        </aside>
       </section>
     </div>
   );
