@@ -40,7 +40,7 @@ export default function WhitepaperPage() {
         actions={
           <Link
             href="#"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 via-fuchsia-500 to-amber-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-slate-950 shadow-[0_10px_40px_rgba(68,249,255,0.35)]"
+            className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-white shadow-lg shadow-orange-200/60 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-orange-600"
           >
             Download PDF
           </Link>
@@ -51,26 +51,26 @@ export default function WhitepaperPage() {
           {sections.map((section) => (
             <div
               key={section.title}
-              className="rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.45)] backdrop-blur"
+              className="rounded-3xl border border-orange-100 bg-white p-8 shadow-sm"
             >
-              <h2 className="text-2xl font-semibold text-slate-50">{section.title}</h2>
-              <p className="mt-4 text-base leading-7 text-slate-300">{section.body}</p>
+              <h2 className="text-2xl font-semibold text-slate-900">{section.title}</h2>
+              <p className="mt-4 text-base leading-7 text-slate-600">{section.body}</p>
             </div>
           ))}
         </article>
-        <aside className="space-y-6 rounded-3xl border border-slate-800/60 bg-slate-950/50 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.5)] backdrop-blur">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">
+        <aside className="space-y-6 rounded-3xl border border-orange-100 bg-orange-50 p-8 shadow-sm">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
             Reference Materials
           </h3>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-600">
             Download companion documents to explore DogeChef&apos;s token architecture, governance framework, and technical primitives.
           </p>
-          <ul className="space-y-4 text-sm font-medium text-slate-200">
+          <ul className="space-y-4 text-sm font-medium text-slate-700">
             {downloadLinks.map((link) => (
               <li key={link.label}>
                 <Link
                   href={link.href}
-                  className="flex items-center justify-between rounded-2xl border border-slate-800/60 bg-slate-900/60 px-4 py-3 transition-transform duration-300 hover:-translate-y-0.5 hover:border-sky-400/60 hover:text-sky-100"
+                  className="flex items-center justify-between rounded-2xl border border-orange-100 bg-white px-4 py-3 transition-transform duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-600"
                 >
                   {link.label}
                   <span aria-hidden>↗</span>

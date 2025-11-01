@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --background: #050510;
-  --foreground: #f7fbff;
-  --accent: #44f9ff;
-  --accent-secondary: #9f50ff;
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --accent: #f97316;
+  --accent-secondary: #fbbf24;
+  --muted: #f8fafc;
 }
 
 @theme inline {
@@ -33,13 +34,13 @@ a:hover {
 }
 
 ::selection {
-  background-color: rgba(68, 249, 255, 0.35);
-  color: #050510;
+  background-color: rgba(249, 115, 22, 0.25);
+  color: #1f2937;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(68, 249, 255, 0.4) rgba(15, 23, 42, 0.4);
+  scrollbar-color: rgba(249, 115, 22, 0.4) rgba(226, 232, 240, 0.6);
 }
 
 div::-webkit-scrollbar,
@@ -49,11 +50,11 @@ section::-webkit-scrollbar {
 
 div::-webkit-scrollbar-track,
 section::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.4);
+  background: rgba(226, 232, 240, 0.6);
 }
 
 div::-webkit-scrollbar-thumb,
 section::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(68, 249, 255, 0.6), rgba(159, 80, 255, 0.6));
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.6), rgba(251, 191, 36, 0.6));
   border-radius: 999px;
 }

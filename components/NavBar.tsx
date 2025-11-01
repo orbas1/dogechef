@@ -16,12 +16,12 @@ export function NavBar() {
   const pathname = usePathname();
 
   return (
-    <header className="relative z-10">
-      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6 lg:px-10">
+    <header className="sticky top-0 z-20 border-b border-orange-100/60 bg-white/90 backdrop-blur">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" className="group flex items-center gap-3">
-          <div className="relative h-12 w-12 overflow-hidden rounded-2xl bg-slate-900/70 ring-1 ring-sky-500/30 transition-all duration-300 group-hover:scale-105 group-hover:ring-emerald-400/40">
+          <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-orange-200 bg-orange-50 transition-transform duration-300 group-hover:-translate-y-0.5">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="DogeChef logo"
               fill
               className="object-contain"
@@ -30,13 +30,13 @@ export function NavBar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-medium uppercase tracking-[0.32em] text-slate-300">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-500">
               DogeChef
             </span>
-            <span className="text-lg font-semibold text-slate-50">Culinary Crypto</span>
+            <span className="text-lg font-semibold text-slate-900">Culinary Crypto</span>
           </div>
         </Link>
-        <div className="hidden items-center gap-8 rounded-full border border-slate-800/60 bg-slate-900/40 px-8 py-3 text-sm font-medium uppercase tracking-[0.25em] text-slate-400 shadow-[0_0_40px_rgba(68,249,255,0.12)] backdrop-blur lg:flex">
+        <div className="hidden items-center gap-6 rounded-full border border-orange-100 bg-white/80 px-7 py-2 text-sm font-medium uppercase tracking-[0.2em] text-slate-500 shadow-sm lg:flex">
           {navigation.map((item) => {
             const active = pathname === item.href;
 
@@ -46,8 +46,8 @@ export function NavBar() {
                 href={item.href}
                 className={`transition-colors duration-200 ${
                   active
-                    ? "text-sky-200"
-                    : "text-slate-400 hover:text-sky-100"
+                    ? "text-orange-500"
+                    : "hover:text-orange-500"
                 }`}
               >
                 {item.name}
@@ -57,13 +57,13 @@ export function NavBar() {
         </div>
         <Link
           href="/tokenomics"
-          className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-400 via-fuchsia-500 to-amber-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-slate-950 shadow-[0_10px_40px_rgba(68,249,255,0.35)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgba(159,80,255,0.45)]"
+          className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-200/60 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-orange-600"
         >
           Mint Soon
         </Link>
       </nav>
-      <div className="mx-auto mt-2 w-full max-w-6xl px-6 lg:hidden">
-        <div className="flex flex-wrap gap-3 rounded-2xl border border-slate-800/60 bg-slate-900/50 px-5 py-4 text-[0.68rem] font-semibold uppercase tracking-[0.35em] text-slate-400 shadow-[0_0_40px_rgba(68,249,255,0.12)] backdrop-blur">
+      <div className="mx-auto w-full max-w-6xl px-6 pb-4 lg:hidden">
+        <div className="flex flex-wrap gap-2 rounded-2xl border border-orange-100 bg-white p-4 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-slate-500 shadow-sm">
           {navigation.map((item) => {
             const active = pathname === item.href;
 
@@ -71,8 +71,8 @@ export function NavBar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`transition-colors duration-200 ${
-                  active ? "text-sky-200" : "hover:text-sky-100"
+                className={`rounded-full px-3 py-1 transition-colors duration-200 ${
+                  active ? "bg-orange-100 text-orange-600" : "hover:text-orange-500"
                 }`}
               >
                 {item.name}
