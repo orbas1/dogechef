@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "DogeChef",
     images: [
       {
-        url: "/logo.svg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "DogeChef aurora logo",
+        alt: "DogeChef logo",
       },
     ],
   },
@@ -42,10 +42,12 @@ export const metadata: Metadata = {
     title: "DogeChef | Futuristic Culinary Memecoin",
     description:
       "Taste the future of crypto with DogeChef's hyper-modern memecoin experience.",
-    images: ["/logo.svg"],
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/icon.svg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
@@ -55,13 +57,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-slate-950">
+    <html lang="en" className="bg-white">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} relative min-h-screen overflow-x-hidden bg-white text-slate-900 antialiased`}
       >
-        <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(68,249,255,0.26),transparent_55%),radial-gradient(circle_at_80%_10%,rgba(159,80,255,0.22),transparent_60%),radial-gradient(circle_at_50%_80%,rgba(255,178,77,0.18),transparent_65%)]" />
-        </div>
         <div className="relative flex min-h-screen flex-col">
           <NavBar />
           <main className="flex-1">

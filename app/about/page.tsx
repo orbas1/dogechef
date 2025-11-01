@@ -44,12 +44,12 @@ export default function AboutPage() {
       />
       <section className="mx-auto grid w-full max-w-5xl gap-14 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
         <article className="space-y-8">
-          <div className="rounded-3xl border border-slate-800/60 bg-slate-900/60 p-8 shadow-[0_20px_60px_rgba(15,23,42,0.45)] backdrop-blur">
-            <h2 className="text-2xl font-semibold text-slate-50">Our Origin Story</h2>
-            <p className="mt-4 text-base leading-7 text-slate-300">
+          <div className="rounded-3xl border border-orange-100 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold text-slate-900">Our Origin Story</h2>
+            <p className="mt-4 text-base leading-7 text-slate-600">
               Born from a late-night meme cook-off, DogeChef quickly evolved into a movement—pairing culinary theatrics with experimental finance. We believe joy is the ultimate utility, and every token unlocks a seat at the chef&apos;s table.
             </p>
-            <p className="mt-4 text-base leading-7 text-slate-300">
+            <p className="mt-4 text-base leading-7 text-slate-600">
               The collective spans chefs, blockchain savants, artists, and community strategists, each contributing secret recipes that keep the ecosystem surprising and delightful.
             </p>
           </div>
@@ -57,43 +57,43 @@ export default function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="rounded-3xl border border-slate-800/60 bg-slate-950/50 p-6 text-center shadow-[0_18px_60px_rgba(15,23,42,0.4)] backdrop-blur"
+                className="rounded-3xl border border-orange-100 bg-orange-50 p-6 text-center shadow-sm"
               >
-                <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-100">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-orange-500">
                   {value.title}
                 </h3>
-                <p className="mt-3 text-sm text-slate-300">{value.description}</p>
+                <p className="mt-3 text-sm text-slate-600">{value.description}</p>
               </div>
             ))}
           </div>
         </article>
         <aside className="space-y-6">
-          <div className="relative overflow-hidden rounded-[32px] border border-slate-800/60 bg-gradient-to-br from-slate-950/60 via-slate-900/50 to-slate-950/70 p-8 shadow-[0_28px_90px_rgba(15,23,42,0.5)] backdrop-blur">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(68,249,255,0.18),transparent_60%),radial-gradient(circle_at_80%_20%,rgba(159,80,255,0.2),transparent_65%)]" />
+          <div className="relative overflow-hidden rounded-[32px] border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-orange-100 p-8 shadow-[0_25px_70px_rgba(249,115,22,0.16)]">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(249,115,22,0.18),transparent_60%),radial-gradient(circle_at_80%_20%,rgba(251,191,36,0.18),transparent_65%)]" />
             <div className="relative space-y-4">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-200">
+              <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
                 Kitchen Snapshot
               </h2>
-              <p className="text-3xl font-semibold text-slate-50">Global collective • 24/7 innovation</p>
-              <p className="text-sm text-slate-300">
+              <p className="text-3xl font-semibold text-slate-900">Global collective • 24/7 innovation</p>
+              <p className="text-sm text-slate-600">
                 From Tokyo test kitchens to Berlin NFT galleries, DogeChef experiments continuously to deliver irresistible on-chain experiences.
               </p>
             </div>
           </div>
           <div className="space-y-4">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-orange-500">
               Core Team
             </h2>
             <div className="space-y-4">
               {team.map((member) => (
                 <div
                   key={member.name}
-                  className="rounded-3xl border border-slate-800/60 bg-slate-900/60 p-6 shadow-[0_18px_60px_rgba(15,23,42,0.45)] backdrop-blur"
+                  className="rounded-3xl border border-orange-100 bg-white p-6 shadow-sm"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-sky-400/40 bg-slate-900/70">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-orange-200 bg-orange-50">
                       <Image
-                        src="/logo.svg"
+                        src="/logo.png"
                         alt="Avatar placeholder"
                         fill
                         sizes="56px"
@@ -101,11 +101,11 @@ export default function AboutPage() {
                       />
                     </div>
                     <div>
-                      <p className="text-base font-semibold text-slate-50">{member.name}</p>
-                      <p className="text-xs uppercase tracking-[0.3em] text-slate-400">{member.role}</p>
+                      <p className="text-base font-semibold text-slate-900">{member.name}</p>
+                      <p className="text-xs uppercase tracking-[0.3em] text-orange-500">{member.role}</p>
                     </div>
                   </div>
-                  <p className="mt-4 text-sm text-slate-300">{member.bio}</p>
+                  <p className="mt-4 text-sm text-slate-600">{member.bio}</p>
                 </div>
               ))}
             </div>
